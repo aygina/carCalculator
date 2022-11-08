@@ -1,0 +1,93 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="normalize" href="styles/normalize.css">
+    <link rel="stylesheet" href="styles/style.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Comfortaa:wght@700&family=PT+Sans&display=swap"
+        rel="stylesheet">
+    <title>Calculator</title>
+</head>
+
+<body>
+    <div class="wrapper">
+        <div class="list">
+            <h1>Калькулятор</h1>
+            <span>Рассчитайте стоимость Вашего автомобиля всего за одну минуту.</span>
+            <div class="cost">
+                <p>Цена на аукционе:</p>
+                <input type="text">
+            </div>
+            <div class="type">
+                <p>Аукцион:</p>
+                <select name="auction" id="auction">
+                    <option value="auction__random">По умолчанию</option>
+                    <option value="auction__tokyo">CAA TOKYO</option>
+                    <option value="auction__sendai">HONDA SENDAI</option>
+                    <option value="auction__kobe">ISUZU KOBE</option>
+                    <option value="auction__fukuoka">JU FUKUOKA</option>
+                    <option value="auction__kansai">KANSAI MATSUBARA AA</option>
+                    <option value="auction__osaka">NAA OSAKA</option>
+                    <option value="auction__sapporo">SAA SAPPORO</option>
+                    <option value="auction__yokohama">USS YOKOHAMA</option>
+                </select>
+            </div>
+            <div class="service">
+                <p>Тип услуги:</p>
+                <input type="radio" name="service__whole" id="service__whole">
+                <label for="service__whole">Целый автомобиль</label><br>
+                <input type="radio" name="service__cutted" id="service__cutted">
+                <label for="service__cutted">Распил легковой</label><br>
+                <input type="radio" name="service__light" id="service__light">
+                <label for="service__light">Конструктор легковой</label><br>
+                <input type="radio" name="service__jeep" id="service__jeep">
+                <label for="service__jeep">Конструктор джип, м/а, европ. марки</label><br>
+
+            </div>
+            <div class="fuel">
+                <p>Тип топлива:</p>
+                <input type="radio" name="fuel__petrol" id="fuel__petrol">
+                <label for="fuel__petrol">бензин (включая гибрид)</label><br>
+                <input type="radio" name="fuel__diesel" id="fuel__diesel">
+                <label for="fuel__diesel">дизельное топливо</label><br>
+                <input type="radio" name="fuel__electro" id="fuel__electro">
+                <label for="fuel__electro">электрический</label><br>
+            </div>
+            <div class="cost">
+                <p>Объем двигателя, см3:</p>
+                <input type="text">
+            </div>
+            <div class="cost">
+                <p>Мощность, л.с.:</p>
+                <input type="text">
+            </div>
+            <div class="age">
+                <p>Возраст автомобиля:</p>
+                <input type="radio" name="age__0" id="age__0">
+                <label for="age__0">Меньше 3 лет</label><br>
+                <input type="radio" name="age__3" id="age__3">
+                <label for="age__3">От 3 до 5 лет</label><br>
+                <input type="radio" name="age__5" id="age__5">
+                <label for="age__5">От 5 до 7 лет</label><br>
+                <input type="radio" name="age__7" id="age__7">
+                <label for="age__7">Больше 7 лет</label><br>
+            </div>
+            <div class="customer">
+                <p>Получатель:</p>
+                <input type="radio" name="customer__individual" id="customer__individual">
+                <label for="customer__individual">Физическое лицо</label><br>
+                <input type="radio" name="customer__entity" id="customer__entity">
+                <label for="customer__entity">Юридическое лицо</label><br>
+            </div>
+            <button>Рассчитать</button>
+        </div>
+    </div>
+    <script src="index.js"></script>
+</body>
+
+</html>
