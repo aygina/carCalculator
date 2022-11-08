@@ -43,8 +43,7 @@ input[type=text] {
 }
 
 select {
-    width: 100%;
-    max-width: 29ch;
+    width: 19.4vw;
     border-radius: 0.25em;
     border-color: #bdbdbd;
     padding: 0.45em;
