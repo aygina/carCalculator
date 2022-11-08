@@ -1,12 +1,14 @@
-.wrapper {
-    max-width: 1160px;
-    max-height: 100%;
-    margin-left: 25vw;
-    margin-right: 25vw;
-    padding-bottom: 30px;
-    background-color: white;
-    padding-left: 30px;
-    padding-right: 30px;
+@media screen and (min-width: 600px) {
+    .wrapper {
+        max-width: 1160px;
+        max-height: 100%;
+        margin-left: 25vw;
+        margin-right: 25vw;
+        padding-bottom: 30px;
+        background-color: white;
+        padding-left: 30px;
+        padding-right: 30px;
+    }
 }
 
 body {
@@ -70,4 +72,48 @@ button {
     width: 302px;
     height: 36px;
     margin-top: 10px;
+}
+
+@media screen and (max-width: 599px) {
+    .wrapper {
+        max-width: 1160px;
+        max-height: 100%;
+        margin-left: 10vw;
+        margin-right: 10vw;
+        padding-bottom: 30px;
+        background-color: white;
+        padding-left: 30px;
+        padding-right: 30px;
+    }
+
+    select {
+        width: 30vw;
+        border-radius: 0.25em;
+        border-color: #bdbdbd;
+        padding: 0.45em;
+        font-family: 'Comfortaa';
+        font-style: normal;
+        font-size: 0.9rem;
+        cursor: pointer;
+        line-height: 1.1;
+        background-image: linear-gradient(to top, #f9f9f9, #fff 33%);
+    }
+
+    button {
+        background: rgb(95, 11, 11);
+        border: 1px solid #bdbdbd;
+        border-radius: 0.25rem;
+        color: #fff;
+        font-size: 1.15em;
+        font-family: 'Comfortaa', sans-serif;
+        font-style: normal;
+        width: 139px;
+        height: 36px;
+        margin-top: 10px;
+    }
+
+    h1 {
+        font-size: 1.5rem;
+        font-weight: bold;
+    }
 }
