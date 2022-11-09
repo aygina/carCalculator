@@ -72,6 +72,7 @@ button {
     width: 302px;
     height: 36px;
     margin-top: 10px;
+    cursor: pointer;
 }
 
 @media screen and (max-width: 599px) {
@@ -108,8 +109,9 @@ button {
         font-family: 'Comfortaa', sans-serif;
         font-style: normal;
         width: 150px;
-        height: 36px;
+        height: 45px;
         margin-top: 10px;
+        cursor: pointer;
     }
 
     h1 {

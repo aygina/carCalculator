@@ -26,7 +26,7 @@
             <div class="type">
                 <p>Аукцион:</p>
                 <select name="auction" id="auction" onchange="changeCost(this)">
-                    <option value="0"></option>
+                    <option value=""></option>
                     <option value="2915">По умолчанию</option>
                     <option value="4552">CAA TOKYO</option>
                     <option value="2745">HONDA SENDAI</option>
@@ -40,7 +40,7 @@
             </div>
             <div class="service">
                 <p>Тип услуги:</p>
-                <input type="radio" name="service" id="service__whole" value="5421">
+                <input type="radio" name="service" id="service__whole" value="5421" checked="checked">
                 <label for="service__whole">Целый автомобиль</label><br>
                 <input type="radio" name="service" id="service__cutted" value="2746">
                 <label for="service__cutted">Распил легковой</label><br>
@@ -52,7 +52,7 @@
             </div>
             <div class="fuel">
                 <p>Тип топлива:</p>
-                <input type="radio" name="fuel" id="fuel__petrol" value="2145">
+                <input type="radio" name="fuel" id="fuel__petrol" value="2145" checked="checked">
                 <label for="fuel__petrol">бензин (включая гибрид)</label><br>
                 <input type="radio" name="fuel" id="fuel__diesel" value="1975">
                 <label for="fuel__diesel">дизельное топливо</label><br>
@@ -69,7 +69,7 @@
             </div>
             <div class="age">
                 <p>Возраст автомобиля:</p>
-                <input type="radio" name="age" id="age__0" value="2000">
+                <input type="radio" name="age" id="age__0" value="2000" checked="checked">
                 <label for="age__0">Меньше 3 лет</label><br>
                 <input type="radio" name="age" id="age__3" value="1000">
                 <label for="age__3">От 3 до 5 лет</label><br>
@@ -80,12 +80,13 @@
             </div>
             <div class="customer">
                 <p>Получатель:</p>
-                <input type="radio" name="customer" id="customer__individual" value="2500">
+                <input type="radio" name="customer" id="customer__individual" value="2500" checked="checked">
                 <label for="customer__individual">Физическое лицо</label><br>
                 <input type="radio" name="customer" id="customer__entity" value="5000">
                 <label for="customer__entity">Юридическое лицо</label><br>
             </div>
             <button onclick="showResult();">Рассчитать</button>
+            <button onclick="clearArr();">Начать заново</button>
             <div id="lastCost"></div>
         </div>
     </div>
