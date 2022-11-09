@@ -1,34 +1,30 @@
-function check() {
-    let userName = document.getElementById("userName").value;
-    let surname = document.getElementById("surname").value;
-    let email = document.getElementById("email").value;
-    let password = document.getElementById("password").value;
-    let passLength = document.getElementById("password").value.length;
-    let passwordConf = document.getElementById("passwordConf").value;
+let result = [];
 
-    if (userName == '') {
-        alert('Поле "Имя" не заполнено')
-    } else if (surname == '') {
-        alert('Поле "Фамилия" не заполнено')
-    } else if (email == '') {
-        alert('Поле "Email" не заполнено')
-    } else if (passLength < 7) {
-        alert('Пароль должен содержать больше 6 символов')
-    } else if (passwordConf != password) {
-        alert('Введенные пароли не совпадают')
-    } else
-        alert("Добро пожаловать!");
+
+function changeCost(selectObject) {
+    let auction = selectObject.value;
+    result.push(Number(auction));
+    if (auction === '0') {
+        alert('Выберите аукцион!')
+    }
+    console.log(auction);
 }
 
-function showPass() {
-    let pass = document.getElementById("password");
-    let passConf = document.getElementById("passwordConf");
+function showResult() {
+    let cost = Number(document.getElementById("cost").value);
+    let engine = Number(document.getElementById("engine").value);
+    let power = Number(document.getElementById("power").value);
+    let service = Number(document.querySelector('input[name="service"]:checked').value);
+    let fuel = Number(document.querySelector('input[name="fuel"]:checked').value);
+    let age = Number(document.querySelector('input[name="age"]:checked').value);
+    let customer = Number(document.querySelector('input[name="customer"]:checked').value);
 
-    if (pass.type === "password") {
-        pass.type = "text";
-        passConf.type = "text";
-    } else {
-        pass.type = "password";
-        passConf.type = "password";
-    }
+    result.push(cost * 2, engine * 1.75, power * 5, service, fuel, age, customer);
+    console.log(result);
+
+    let resultCost = result.reduce(function (sum, current) {
+        return sum + current;
+    }, 0);
+
+    console.log(`Cтоимость автомобиля: ` + resultCost);
 }
