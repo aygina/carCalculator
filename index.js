@@ -3,9 +3,6 @@ let result = [];
 function changeCost(selectObject) {
     let auction = selectObject.value;
     result.push(Number(auction));
-    if (auction == '') {
-        alert('Выберите аукцион!')
-    }
     console.log(auction);
 }
 
