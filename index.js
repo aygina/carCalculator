@@ -22,9 +22,11 @@ function showResult() {
     result.push(cost * 2, engine * 1.75, power * 5, service, fuel, age, customer);
     console.log(result);
 
-    let resultCost = result.reduce(function (sum, current) {
+    let resultSum = result.reduce(function (sum, current) {
         return sum + current;
     }, 0);
 
-    console.log(`Cтоимость автомобиля: ` + resultCost);
+    let resultCost = Math.round(resultSum * 0.42); //conversion to rub
+    
+    lastCost.textContent = (`Cтоимость автомобиля: ` + resultCost + `руб`);
 }
